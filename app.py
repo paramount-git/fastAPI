@@ -27,7 +27,8 @@ def search(req: SearchRequest):
         results.append({
             "product_name": product["product_name"],
             "dimension": product["dimension"],
-            "brand": product.get("brand", ""),
+            "brand": product.["brand"],
             "score": float(score)
         })
     return {"results": results}
+
